@@ -32,6 +32,9 @@ public class GUI extends JFrame {
         connection = Connect.ConnectDb();
 
         JFrame f = new JFrame();
+        f.setIconImage(new ImageIcon("film.png").getImage());
+        f.setSize(553, 829);
+        f.setTitle("Register");
         f.setSize(553, 829);
         f.setTitle("Secretariat");
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

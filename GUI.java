@@ -24,6 +24,7 @@ public class GUI extends JFrame {
     private JButton signupb;
   
 
+    
     public static void main(String[] args) {
         new GUI();
     }

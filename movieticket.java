@@ -33,15 +33,6 @@ public class movieticket extends javax.swing.JFrame {
      Connection con;
      PreparedStatement ps1;
      PreparedStatement ps2;
-
-     static Connection con1;
-     PreparedStatement ps3;
-     PreparedStatement ps4;
-
-     static Connection con2;
-     PreparedStatement ps5;
-     PreparedStatement ps6;
-
      /**
       * This method is called from within the constructor to initialize the form.
       * WARNING: Do NOT modify this code. The content of this method is always
@@ -303,7 +294,7 @@ public class movieticket extends javax.swing.JFrame {
 
          int lastid = 0;
          try {
-             Class.forName("com.mysql.cj.jdbc.Driver");
+             Class.forName("com.mysql.jdbc.Driver");
              con = DriverManager.getConnection("jdbc:mysql://localhost/movieticket", "root", "");
              String query = "insert into sales(subtotal,pay,balance)values(?,?,?)";
              ps1 = con.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
@@ -365,8 +356,7 @@ public class movieticket extends javax.swing.JFrame {
           * look and feel. For details see
           * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
           */
-         con1 = Connect2.ConnectDb();
-         con2 = Connect3.ConnectDb();
+
         
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {

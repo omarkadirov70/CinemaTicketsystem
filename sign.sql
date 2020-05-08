@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Май 03 2020 г., 14:45
+-- Время создания: Май 08 2020 г., 15:13
 -- Версия сервера: 10.4.11-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -18,16 +18,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `sign in`
+-- База данных: `sign`
 --
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `sing in`
+-- Структура таблицы `sign`
 --
 
-CREATE TABLE `sing in` (
+CREATE TABLE `sign` (
   `Login` text NOT NULL,
   `Password` text NOT NULL,
   `Question` text NOT NULL,
@@ -35,11 +35,11 @@ CREATE TABLE `sing in` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Дамп данных таблицы `sing in`
+-- Дамп данных таблицы `sign`
 --
 
-INSERT INTO `sing in` (`Login`, `Password`, `Question`, `Answer`) VALUES
-('admin', '12345', 'Your University', 'IITU');
+INSERT INTO `sign` (`Login`, `Password`, `Question`, `Answer`) VALUES
+('Omar', 'omar', 'Your University', 'IITU');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

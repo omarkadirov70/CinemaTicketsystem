@@ -56,12 +56,12 @@ public class Register extends JFrame {
         tf1.setForeground(Color.GRAY);
         tf1.setBackground(new Color(39, 48, 57)); p.add(tf1);
 
-        cb.setBounds(130, 364, 280, 35);
+        cb.setBounds(130, 316, 280, 35);
         cb.setFont(new Font("Bahnschrift SemiCondensed", Font.BOLD, 20));
         cb.setForeground(Color.GRAY);
         cb.setBackground(new Color(39, 48, 57)); p.add(cb);
 
-        tf2.setBounds(130, 316, 280, 35);
+        tf2.setBounds(130, 364, 280, 35);
         tf2.setFont(new Font("Bahnschrift SemiCondensed", Font.BOLD, 20));
         tf2.setForeground(Color.GRAY);
         tf2.setBackground(new Color(39, 48, 57)); p.add(tf2);

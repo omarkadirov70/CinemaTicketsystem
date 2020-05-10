@@ -154,7 +154,10 @@ public class GUI extends JFrame {
                         resultSet.close();
                         preparedStatement.close();
                         setVisible(false);
-                        JOptionPane.showMessageDialog(null, "Molodech");
+                        JOptionPane.showMessageDialog(null, "You logged in");
+                        new movieticket();
+                        
+                        f.dispose();
 
                     } else {
                         JOptionPane.showMessageDialog(null, "Incorrect login or password");
@@ -164,6 +167,9 @@ public class GUI extends JFrame {
                 }
             }
         });
+/////////////////////////////////////////////////////////////////
+
+
         f.setVisible(true);
         f.setLocationRelativeTo(null);
         f.setResizable(false);

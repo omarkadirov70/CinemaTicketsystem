@@ -134,7 +134,7 @@ public class GUI extends JFrame {
             }
         });
 
-movieticket mv = new movieticket();
+User user = new User();
 
         b1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -156,7 +156,7 @@ movieticket mv = new movieticket();
                         preparedStatement.close();
                         setVisible(false);
                         JOptionPane.showMessageDialog(null, "You logged in");
-                        mv.setVisible(true);
+                        user.setVisible(true);
                         
                         f.dispose();
 

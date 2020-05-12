@@ -99,14 +99,14 @@ public class User extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
     new GUI();
-    
+    dispose();
     }                                        
 movieticket mv= new movieticket();
 
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         mv.setVisible(true);
-      
+        dispose();
     }                                        
 
     /**

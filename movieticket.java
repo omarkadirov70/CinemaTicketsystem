@@ -71,7 +71,7 @@ public class movieticket extends javax.swing.JFrame {
 
          jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
          jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-         jLabel1.setText("Movie Ticket Booking");
+         jLabel1.setText("Food order");
 
          javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
          jPanel1.setLayout(jPanel1Layout);
@@ -79,20 +79,20 @@ public class movieticket extends javax.swing.JFrame {
                  .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
                          jPanel1Layout.createSequentialGroup()
                                  .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                 .addComponent(jLabel1).addGap(194, 194, 194)));
+                                 .addComponent(jLabel1).addGap(260, 260, 260)));
          jPanel1Layout.setVerticalGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                  .addGroup(jPanel1Layout.createSequentialGroup().addGap(49, 49, 49).addComponent(jLabel1)
                          .addContainerGap(52, Short.MAX_VALUE)));
 
          jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(0));
 
-         chk1.setText("ODC");
+         chk1.setText("Popcorn");
 
-         chk2.setText("Balcony");
+         chk2.setText("Drink");
 
-         chk3.setText("Box");
+         chk3.setText("French fries");
 
-         chk4.setText("Super Balcony");
+         chk4.setText("Hot Dog");
 
          javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
          jPanel2.setLayout(jPanel2Layout);
@@ -140,7 +140,7 @@ public class movieticket extends javax.swing.JFrame {
 
          jTable1.setModel(new javax.swing.table.DefaultTableModel(new Object[][] {
 
-         }, new String[] { "SeatType", "Price", "Qty", "Total" }));
+         }, new String[] { "Type of food", "Price", "Quantity", "Total" }));
          jScrollPane1.setViewportView(jTable1);
 
          jLabel2.setText("Subtotal");
@@ -336,7 +336,7 @@ public class movieticket extends javax.swing.JFrame {
                  ps2.executeUpdate();
              }
 
-             JOptionPane.showMessageDialog(this, "Sales Completeeee");
+             JOptionPane.showMessageDialog(this, "Order completed successfully");
 
          } catch (ClassNotFoundException | SQLException ex) {
              Logger.getLogger(movieticket.class.getName()).log(Level.SEVERE, null, ex);

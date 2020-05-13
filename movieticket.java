@@ -383,8 +383,8 @@ txtsub.setText(String.valueOf(sum));
 
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-// menu.setVisible(true);
-//         dispose();
+new User().setVisible(true);
+         dispose();
     }                                        
 
     

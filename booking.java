@@ -880,7 +880,6 @@ public class booking extends JFrame implements ActionListener
 						output.write(newline);
 						output.write("Ticket Block: " + ticketblock);
 						output.write(newline);
-						output.write("____________________________________________________________________________________");
 						output.write(newline);
 					}
 					output.close();

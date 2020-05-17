@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class AdminPage extends JFrame {
 
     private JLabel idLabel, nameLabel, durLabel, ratingLabel,  priceLabel, countLabel;
-    private JButton addButton, deleteButton,refreshButton ,backmenu;
+    private JButton addButton, deleteButton ,backmenu;
     private JTextField idField,nameField, durField, priceField, countField;
     private String[] rating={"Rating","G", "PG", "PG-13", "R", "NC-17"};
     private Object[] columns={"Id", "Name", "Duration","Rating","Price", "Count"};
@@ -25,10 +25,12 @@ public class AdminPage extends JFrame {
 
     public AdminPage() {
         setLayout(new FlowLayout());
-        setSize(900,600);
-        setTitle("Shop Application");
+        setSize(1100,700);
+        setTitle("ADD MOVIE INFO");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
+        setLocationRelativeTo(null);
+        setResizable(false);
 
         clientSocket=new ClientSocket();
 
@@ -36,8 +38,8 @@ public class AdminPage extends JFrame {
         tableModel=new DefaultTableModel();
         tableModel.setColumnIdentifiers(columns);;
         table.setModel(tableModel);
-        table.setBackground(new Color(134,22,22));
-        table.setForeground(new Color(5,33,146));
+        table.setBackground(new Color(81,52,223));
+        table.setForeground(new Color(255,255,255));
         table.setFont(new Font("Arial", 1, 16));
         table.setRowHeight(30);
         table.addMouseListener(new MouseListener() {
@@ -74,66 +76,79 @@ public class AdminPage extends JFrame {
         });
 
         pane=new JScrollPane(table);
-        pane.setBounds(0,0, 450, 600);
-        pane.setBackground(new Color(0x9FC5D5));
-        pane.setForeground(new Color(0x7F2E4D));
+        pane.setBounds(250,0, 800, 600);
+        pane.setBackground(new Color(46,10,225));
+        pane.setForeground(new Color(255,255,255));
         add(pane);
 
         idLabel=new JLabel("ID");
-        idLabel.setBounds(470, 40, 80, 25);
-        idLabel.setForeground(Color.white);
+        idLabel.setBounds(50, 40, 80, 25);
+        idLabel.setFont(new Font("Serif", Font.PLAIN, 15));
+        idLabel.setForeground(Color.GRAY);
+
+
         add(idLabel);
         idField=new JTextField();
-        idField.setBounds(530, 40, 120, 25);
+        idField.setBounds(110, 40, 120, 25);
         add(idField);
 
         ratingLabel=new JLabel("Rating: ");
-        ratingLabel.setBounds(470, 80, 80, 25);
-        ratingLabel.setForeground(Color.white);
+        ratingLabel.setBounds(50, 80, 80, 25);
+        ratingLabel.setFont(new Font("Serif", Font.PLAIN, 15));
+        ratingLabel.setForeground(Color.GRAY);
         add( ratingLabel);
         ratingBox=new JComboBox(rating);
-        ratingBox.setBounds(530, 80, 120, 25);
+        ratingBox.setBounds(110, 80, 120, 25);
         ratingBox.setBackground(new Color(0xFDF8FF));
         ratingBox.setForeground(new Color(0x000000));
         add(ratingBox);
 
 
         nameLabel=new JLabel("Name: ");
-        nameLabel.setBounds(470, 160, 80, 25);
-        nameLabel.setForeground(Color.white);
+        nameLabel.setBounds(50, 160, 80, 25);
+        nameLabel.setFont(new Font("Serif", Font.PLAIN, 15));
+        nameLabel.setForeground(Color.GRAY);
         add(nameLabel);
         nameField=new JTextField();
-        nameField.setBounds(530, 160, 120, 25);
+        nameField.setBounds(110, 160, 120, 25);
         add(nameField);
 
 
         priceLabel=new JLabel("Price:");
-        priceLabel.setBounds(470, 200, 80, 25);
-        priceLabel.setForeground(Color.white);
+        priceLabel.setBounds(50, 200, 80, 25);
+        priceLabel.setFont(new Font("Serif", Font.PLAIN, 15));
+        priceLabel.setForeground(Color.GRAY);
         add(priceLabel);
         priceField=new JTextField();
-        priceField.setBounds(530, 200, 120, 25);
+        priceField.setBounds(110, 200, 120, 25);
         add(priceField);
 
         durLabel=new JLabel("Duration:");
-        durLabel.setBounds(470, 240, 80, 25);
-        durLabel.setForeground(Color.white);
+        durLabel.setBounds(50, 240, 80, 25);
+        durLabel.setFont(new Font("Serif", Font.PLAIN, 15));
+        durLabel.setForeground(Color.GRAY);
         add(durLabel);
         durField=new JTextField();
-        durField.setBounds(530, 240, 120, 25);
+        durField.setBounds(110, 240, 120, 25);
         add(durField);
 
         countLabel=new JLabel("Count:");
-        countLabel.setBounds(470, 280, 80, 25);
-        countLabel.setForeground(Color.white);
+        countLabel.setBounds(50, 280, 80, 25);
+        countLabel.setFont(new Font("Serif", Font.PLAIN, 15));
+        countLabel.setForeground(Color.GRAY);
         add(countLabel);
         countField=new JTextField();
-        countField.setBounds(530, 280, 120, 25);
+        countField.setBounds(110, 280, 120, 25);
         add(countField);
 
         addButton=new JButton("ADD");
-        addButton.setBounds(680, 30, 150, 30);
+        addButton.setBounds(90, 400, 150, 30);
+        addButton.setFont(new Font("Serif", Font.PLAIN, 20));
+        addButton.setForeground(Color.WHITE);
+        addButton.setBackground(new Color(39, 48, 57));
         add(addButton);
+        
+
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -163,7 +178,10 @@ public class AdminPage extends JFrame {
         });
 
         backmenu=new JButton("Back");
-        backmenu.setBounds(680, 300, 150, 30);
+        backmenu.setBounds(90, 470, 150, 30);
+        backmenu.setFont(new Font("Serif", Font.PLAIN, 20));
+        backmenu.setForeground(Color.WHITE);
+        backmenu.setBackground(new Color(39, 48, 57));
         add(backmenu);
         AdminMenu adm = new AdminMenu();
         backmenu.addActionListener(new ActionListener() { 
@@ -174,12 +192,12 @@ public class AdminPage extends JFrame {
 			}
         });
 
-        refreshButton=new JButton("REFRESH");
-        refreshButton.setBounds(680, 210, 150, 30);
-        add(refreshButton);
-
+    
         deleteButton=new JButton("DELETE");
-        deleteButton.setBounds(680, 150, 150, 30);
+        deleteButton.setBounds(90, 540, 150, 30);
+        deleteButton.setFont(new Font("Serif", Font.PLAIN, 20));
+        deleteButton.setForeground(Color.WHITE);
+        deleteButton.setBackground(new Color(39, 48, 57));
         add(deleteButton);
         deleteButton.addActionListener(new ActionListener() {
             @Override

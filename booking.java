@@ -10,7 +10,7 @@ public class booking extends JFrame implements ActionListener
 	JTextField seat, totalcost;
 	Choice type, block, time; // Choices for the GUI
 	JLabel typelbl, blocklbl, timelbl, lblbl, mblbl, rblbl, inputseatlbl, totallbl, title;
-	JButton submitbut, showbut, paybut;
+	JButton submitbut, showbut, paybut,BACK;
 	String selectedtime, total, selectedseat, selectedblock, tickettype;
 	int timechoice, convertedseat1, convertedseat2, totalprice;
 	int totaltickets = 0, currenti;
@@ -89,6 +89,20 @@ public class booking extends JFrame implements ActionListener
 		showbut = new JButton("Show");
         showbut.setBackground(Color.white);
 
+		BACK = new JButton("Finish");
+        BACK.setBounds(150, 0, 100, 30);
+	 BACK.setFont(new Font("Serif", Font.PLAIN, 17));
+         BACK.setForeground(Color.WHITE);
+	 BACK.setBackground(new Color(39, 48, 57));
+	 User user=new User();
+
+	 BACK.addActionListener(new ActionListener() { 
+		public void actionPerformed(ActionEvent a) {
+			user.setVisible(true);
+					
+		   dispose();
+		}
+	});
         
 		int xleft = 0;
 		int yleft = 0;
@@ -333,6 +347,8 @@ public class booking extends JFrame implements ActionListener
 		}
 		/* Adding the labels and text boxes to the screen */
 
+		setLocationRelativeTo(null);
+        setResizable(false);
 		getContentPane().add(title);
 		getContentPane().add(typelbl);
 		getContentPane().add(type);
@@ -341,6 +357,9 @@ public class booking extends JFrame implements ActionListener
 		getContentPane().add(timelbl);
 		getContentPane().add(time);
 		getContentPane().add(showbut);
+
+		getContentPane().add(BACK);
+
 		getContentPane().add(inputseatlbl);
 		getContentPane().add(seat);
 		getContentPane().add(submitbut);
@@ -901,6 +920,7 @@ public class booking extends JFrame implements ActionListener
 	public static void main(String args[])
 	{
 		new booking();
+
 	}
 }
 class Seat

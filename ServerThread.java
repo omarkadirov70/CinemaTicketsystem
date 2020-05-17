@@ -30,6 +30,12 @@ public class ServerThread extends Thread {
                     objectOutputStream.writeObject(packet1);
                 }
 
+                else if(packet.getCode().equals("DELETE_MOVIES")){
+                    Movies movies=(Movies) packet.getData();
+                    ServerApp.deleteMovies(movies.getId());
+                    }
+                    
+
             }
         } catch (Exception e) {
             e.printStackTrace();

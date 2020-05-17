@@ -9,8 +9,8 @@ import java.util.ArrayList;
 
 public class MoviesUser extends JFrame {
 
-    private JLabel idLabel, nameLabel, durLabel, ratingLabel,  priceLabel, countLabel;
-    private JButton buyButton,refreshButton, backmenu;
+    private JLabel idLabel ;
+    private JButton backmenu;
     private JTextField idField,nameField, durField, priceField, countField;
     private String[] rating={"Rating","G", "PG", "PG-13", "R", "NC-17"};
     private Object[] columns={"Id", "Name", "Duration","Rating","Price", "Count"};
@@ -78,103 +78,21 @@ public class MoviesUser extends JFrame {
         pane.setForeground(new Color(0x7F2E4D));
         add(pane);
 
-        idLabel=new JLabel("ID");
-        idLabel.setBounds(470, 40, 80, 25);
-        idLabel.setForeground(Color.white);
-        add(idLabel);
-        idField=new JTextField();
-        idField.setBounds(530, 40, 120, 25);
-        add(idField);
 
-        ratingLabel=new JLabel("Rating: ");
-        ratingLabel.setBounds(470, 80, 80, 25);
-        ratingLabel.setForeground(Color.white);
-        add( ratingLabel);
-        ratingBox=new JComboBox(rating);
-        ratingBox.setBounds(530, 80, 120, 25);
-        ratingBox.setBackground(new Color(0xFDF8FF));
-        ratingBox.setForeground(new Color(0x000000));
-        add(ratingBox);
-
-
-        nameLabel=new JLabel("Name: ");
-        nameLabel.setBounds(470, 160, 80, 25);
-        nameLabel.setForeground(Color.white);
-        add(nameLabel);
-        nameField=new JTextField();
-        nameField.setBounds(530, 160, 120, 25);
-        add(nameField);
-
-
-        priceLabel=new JLabel("Price:");
-        priceLabel.setBounds(470, 200, 80, 25);
-        priceLabel.setForeground(Color.white);
-        add(priceLabel);
-        priceField=new JTextField();
-        priceField.setBounds(530, 200, 120, 25);
-        add(priceField);
-
-        durLabel=new JLabel("Duration:");
-        durLabel.setBounds(470, 240, 80, 25);
-        durLabel.setForeground(Color.white);
-        add(durLabel);
-        durField=new JTextField();
-        durField.setBounds(530, 240, 120, 25);
-        add(durField);
-
-        countLabel=new JLabel("Count:");
-        countLabel.setBounds(470, 280, 80, 25);
-        countLabel.setForeground(Color.white);
-        add(countLabel);
-        countField=new JTextField();
-        countField.setBounds(530, 280, 120, 25);
-        add(countField);
-
-        buyButton=new JButton("BUY");
-        buyButton.setBounds(680, 30, 150, 30);
-        add(buyButton);
-        buyButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String name=nameField.getText();
-                String duration=durField.getText();
-                int price=Integer.parseInt(priceField.getText());
-                int count=Integer.parseInt(countField.getText());
-                String rating=ratingBox.getSelectedItem().toString();
-                if(name.isEmpty() || duration.isEmpty() ){
-                    JOptionPane.showMessageDialog(null, "Please fill all fields!");
-                }
-                else{
-//                     Bought bought=new Bought(null, ClientMainFrame.currentUser.getId(), type, count, price*count);
-//                     boss.clientSocket.addBought(bought);
-//                     Clothe clothe=new Clothe(null, model, price, count, size, type);
-//   //                   boss.clientSocket.
-                }
-            }
-        });
-    
-
-
-
-
+     
         backmenu=new JButton("Back");
         backmenu.setBounds(680, 300, 150, 30);
         add(backmenu);
-       User user= new User();
+        AdminMenu adm = new AdminMenu();
         backmenu.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent a) {
-                user.setVisible(true);
+                adm.setVisible(true);
                         
                dispose();
 			}
         });
 
-        refreshButton=new JButton("REFRESH");
-        refreshButton.setBounds(680, 210, 150, 30);
-        add(refreshButton);
-
-    
-
+      
 
     }
     public void updateMovies(){

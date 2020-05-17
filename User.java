@@ -93,7 +93,11 @@ public class User extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>                        
 
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        MoviesUser mu= new MoviesUser();
+        mu.setVisible(true);
+        mu.updateMovies();
         new MoviesUser();
         dispose();
     }                                        

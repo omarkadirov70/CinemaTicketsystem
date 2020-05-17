@@ -84,7 +84,9 @@ public class AdminMenu extends javax.swing.JFrame {
     }                                        
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        new ClientMainFrame();
+        AdminPage adminpage= new AdminPage();
+        adminpage.setVisible(true);
+        adminpage.updateMovies();
         dispose();
     }                                        
 

@@ -59,4 +59,16 @@ public class ServerApp {
         }
         return movies;
     }
+
+    public static void deleteMovies(Long id){
+        try {
+        PreparedStatement statement=connection.prepareStatement(" DELETE FROM movies WHERE id=? ");
+        statement.setLong(1, id);
+        statement.executeUpdate();
+        statement.close();
+        } catch (Exception e) {
+        e.printStackTrace();
+        }
+        }
+
 }

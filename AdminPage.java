@@ -181,7 +181,16 @@ public class AdminPage extends JFrame {
         deleteButton=new JButton("DELETE");
         deleteButton.setBounds(680, 150, 150, 30);
         add(deleteButton);
-
+        deleteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            Long id=Long.valueOf(idField.getText());
+            Movies movies=new Movies(id, null, null, null, 0, 0);
+            clientSocket.deleteMovies(movies);
+            clearMovies();
+            updateMovies();
+            }
+            });
 
     }
     public void updateMovies(){

@@ -41,4 +41,14 @@ public class ClientSocket {
         return movies;
     }
 
+    public void deleteMovies(Movies movies){
+        Packet packet=new Packet("DELETE_MOVIES", movies);
+        try {
+        output.writeObject(packet);
+        } catch (Exception e) {
+        e.printStackTrace();
+        }
+        }
+
+
 }

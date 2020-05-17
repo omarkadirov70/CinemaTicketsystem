@@ -29,6 +29,7 @@ public class AdminUser {
         JPanel panel2 = new JPanel();
 panel2.setBackground(new Color(13,18,135));
         JButton button = new JButton("Show");
+
 		button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent a) {
 				try {
@@ -40,7 +41,25 @@ panel2.setBackground(new Color(13,18,135));
 					e.printStackTrace();
 				}
 			}
-		});
+        });
+        
+        JButton backb = new JButton("Back");
+        backb.setBounds(50, 200, 100, 30);
+        backb.setForeground(Color.WHITE);
+        backb.setBackground(new Color(39, 48, 57));
+        panel2.add(backb);
+
+
+AdminMenu adm = new AdminMenu();
+
+		backb.addActionListener(new ActionListener() { 
+			public void actionPerformed(ActionEvent a) {
+                adm.setVisible(true);
+                        
+                f.dispose();
+			}
+        });
+
 		panel2.add(button);
 		JScrollPane scrollPane = new JScrollPane();
 		panel2.add(scrollPane);

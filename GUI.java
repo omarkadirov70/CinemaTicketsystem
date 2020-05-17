@@ -134,7 +134,7 @@ public class GUI extends JFrame {
         });
 
 User user = new User();
-
+AdminMenu am = new AdminMenu();
         b1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 try {
@@ -148,8 +148,11 @@ User user = new User();
                     resultSet = preparedStatement.executeQuery();
                     if (text1.getText().equals("Omar") && textResult.getText().equals("2137824")
                             || text1.getText().equals("Shyryn") && textResult.getText().equals("123456789")) {
-
-                        dispose();
+                                JOptionPane.showMessageDialog(null, "Admin logged in");
+                                am.setVisible(true);
+                                
+                                f.dispose();
+                    
                     } else if (resultSet.next()) {
                         resultSet.close();
                         preparedStatement.close();

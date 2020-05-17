@@ -30,7 +30,7 @@ public class GUI extends JFrame {
     }
 
     public GUI() {
-        connection = Connect.ConnectDb();
+        connection = Connect.ConnectDb(); 
 
         JFrame f = new JFrame();
         f.setIconImage(new ImageIcon("film.png").getImage());

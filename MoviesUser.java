@@ -1,4 +1,3 @@
-
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
@@ -8,10 +7,10 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
-public class AdminPage extends JFrame {
+public class MoviesUser extends JFrame {
 
     private JLabel idLabel, nameLabel, durLabel, ratingLabel,  priceLabel, countLabel;
-    private JButton addButton, deleteButton,refreshButton ,backmenu;
+    private JButton buyButton,refreshButton, backmenu;
     private JTextField idField,nameField, durField, priceField, countField;
     private String[] rating={"Rating","G", "PG", "PG-13", "R", "NC-17"};
     private Object[] columns={"Id", "Name", "Duration","Rating","Price", "Count"};
@@ -23,7 +22,7 @@ public class AdminPage extends JFrame {
     public ClientSocket clientSocket;
 
 
-    public AdminPage() {
+    public MoviesUser() {
         setLayout(new FlowLayout());
         setSize(900,600);
         setTitle("Shop Application");
@@ -131,10 +130,10 @@ public class AdminPage extends JFrame {
         countField.setBounds(530, 280, 120, 25);
         add(countField);
 
-        addButton=new JButton("ADD");
-        addButton.setBounds(680, 30, 150, 30);
-        add(addButton);
-        addButton.addActionListener(new ActionListener() {
+        buyButton=new JButton("BUY");
+        buyButton.setBounds(680, 30, 150, 30);
+        add(buyButton);
+        buyButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String name=nameField.getText();
@@ -146,29 +145,25 @@ public class AdminPage extends JFrame {
                     JOptionPane.showMessageDialog(null, "Please fill all fields!");
                 }
                 else{
-                    Movies movies= new Movies(null, name, duration,rating, price, count);
-                    clientSocket.addMovie(movies);
-                    idField.setText("");
-                    nameField.setText("");
-                    durField.setText("");
-                    ratingBox.setSelectedItem(0);
-                    priceField.setText("");
-                    countField.setText("");
-                    JOptionPane.showMessageDialog(null, "Your movies added successfully");
-                    clearMovies();
-                    updateMovies();
-
+//                     Bought bought=new Bought(null, ClientMainFrame.currentUser.getId(), type, count, price*count);
+//                     boss.clientSocket.addBought(bought);
+//                     Clothe clothe=new Clothe(null, model, price, count, size, type);
+//   //                   boss.clientSocket.
                 }
             }
         });
+    
+
+
+
 
         backmenu=new JButton("Back");
         backmenu.setBounds(680, 300, 150, 30);
         add(backmenu);
-        AdminMenu adm = new AdminMenu();
+       User user= new User();
         backmenu.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent a) {
-                adm.setVisible(true);
+                user.setVisible(true);
                         
                dispose();
 			}
@@ -178,9 +173,7 @@ public class AdminPage extends JFrame {
         refreshButton.setBounds(680, 210, 150, 30);
         add(refreshButton);
 
-        deleteButton=new JButton("DELETE");
-        deleteButton.setBounds(680, 150, 150, 30);
-        add(deleteButton);
+    
 
 
     }

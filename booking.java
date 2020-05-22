@@ -114,7 +114,7 @@ public class booking extends JFrame implements ActionListener
 
 		xleft = 50;
 		yleft = 310; //Начальные позиции
-		int totalleftside1 = 0; //«Итого» - это сумма, которая используется для обозначения мест
+		int totalleftside1 = 0; //«total» - это сумма, которая используется для обозначения мест
 
 		for (int i = 0; i < leftside1.length; i++)
 		{
@@ -124,8 +124,8 @@ public class booking extends JFrame implements ActionListener
 				xleft += 50; //Перемещение следующего сиденья вдоль позиции х на 50
 				totalleftside1 ++; //Добавление одного к общему количеству для следующего места
 			}
-			xleft = 50; //Moving back to the left for the next row
-			yleft += 30; //Moving down for the next row
+			xleft = 50; //Возвращаясь влево для следующего ряда
+			yleft += 30; //Двигаясь вниз для следующего ряда
 		}
 
 		xmid = 300;

@@ -6,14 +6,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-public class ServerApp {
+public class ServerForAll {
     public static Connection connection;
     public static void main(String[] args) {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/movieticket?useUnicode=true&serverTimezone=UTC", "root", "");
             ServerSocket serverSocket=new ServerSocket(2002);
-            System.out.println("Waiting client...");
+            System.out.println("Waiting for user synchronization");
             while(true){
                 Socket socket=serverSocket.accept();
                 System.out.println("Client connected");

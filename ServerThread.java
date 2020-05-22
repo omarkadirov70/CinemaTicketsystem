@@ -22,17 +22,17 @@ public class ServerThread extends Thread {
                 Packet packet=(Packet)objectInputStream.readObject();
                 if(packet.getCode().equals("ADD_MOVIES")){
                     Movies movies=(Movies) packet.getData();
-                    ServerApp.addMovies(movies);
+                    ServerForAll.addMovies(movies);
                 }
                 else if(packet.getCode().equals("ALL_MOVIES")){
-                    ArrayList<Movies> movies=ServerApp.getAllMovies();
+                    ArrayList<Movies> movies=ServerForAll.getAllMovies();
                     Packet packet1=new Packet("ALL_MOVIES", movies);
                     objectOutputStream.writeObject(packet1);
                 }
 
                 else if(packet.getCode().equals("DELETE_MOVIES")){
                     Movies movies=(Movies) packet.getData();
-                    ServerApp.deleteMovies(movies.getId());
+                    ServerForAll.deleteMovies(movies.getId());
                     }
                     
 

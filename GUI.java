@@ -109,14 +109,14 @@ public class GUI extends JFrame {
         fb.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 new Forgot();
-                dispose();
+                f.dispose();
             }
         });
 
         signupb.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 new Register();
-                dispose();
+                f.dispose();
             }
         });
 

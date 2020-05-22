@@ -29,7 +29,7 @@ public class User extends javax.swing.JFrame {
 
         jPanel2.setLayout(null);
 
-        jButton1.setBackground(new java.awt.Color(102, 102, 102));
+        jButton1.setBackground(new java.awt.Color(242,205,123));
         jButton1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jButton1.setText("Buy ticket");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -40,7 +40,7 @@ public class User extends javax.swing.JFrame {
         jPanel2.add(jButton1);
         jButton1.setBounds(140, 330, 110, 50);
 
-        jButton2.setBackground(new java.awt.Color(102, 102, 102));
+        jButton2.setBackground(new java.awt.Color(255, 101, 101));
         jButton2.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jButton2.setText("Buy food");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -51,7 +51,7 @@ public class User extends javax.swing.JFrame {
         jPanel2.add(jButton2);
         jButton2.setBounds(140, 400, 110, 50);
 
-        jButton3.setBackground(new java.awt.Color(102, 102, 102));
+        jButton3.setBackground(new java.awt.Color(64, 141, 242));
         jButton3.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jButton3.setText("Log out");
         jButton3.addActionListener(new java.awt.event.ActionListener() {

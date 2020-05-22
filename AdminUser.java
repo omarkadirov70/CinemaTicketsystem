@@ -27,9 +27,10 @@ public class AdminUser {
         f.setIconImage(new ImageIcon("film.png").getImage());
 
         JPanel panel2 = new JPanel();
-panel2.setBackground(new Color(13,18,135));
+panel2.setBackground(new Color(255, 101, 101));
         JButton button = new JButton("Show");
-
+        button.setForeground(Color.WHITE);
+        button.setBackground(new Color(64,141,242));
 		button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent a) {
 				try {
@@ -46,7 +47,7 @@ panel2.setBackground(new Color(13,18,135));
         JButton backb = new JButton("Back");
         backb.setBounds(50, 200, 100, 30);
         backb.setForeground(Color.WHITE);
-        backb.setBackground(new Color(39, 48, 57));
+        backb.setBackground(new Color(64,141,242));
         panel2.add(backb);
 
 

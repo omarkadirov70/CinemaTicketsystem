@@ -19,14 +19,14 @@ public class Forgot extends JFrame {
 
     private JPanel p = new JPanel();
 
-    private JLabel l = new JLabel("Reset Password");
+    private JLabel l = new JLabel("Password Recovery");
     private JLabel l0 = new JLabel();
 
     private JTextField tf1 = new JTextField(" Login");
     private JTextField tf2 = new JTextField(" Answer", 30);
     private JTextField tf3 = new JTextField();
 
-    private JButton b1 = new JButton("Check");
+    private JButton b1 = new JButton("Show Password");
     private JButton b2 = new JButton("Back");
 
     private JComboBox cb = new JComboBox<>(qu);
@@ -50,7 +50,7 @@ public class Forgot extends JFrame {
         
         p.setLayout(null);
 
-        l.setBounds(160, 140, 300, 30);
+        l.setBounds(125, 140, 300, 40);
         l.setFont(new Font("Bahnschrift SemiCondensed", Font.BOLD, 30));
         l.setForeground(new Color(255, 255, 255)); p.add(l);
 
@@ -74,7 +74,7 @@ public class Forgot extends JFrame {
         tf3.setForeground(Color.BLACK);
         tf3.setBackground(new Color(255, 101, 101)); p.add(tf3);
 
-        b1.setBounds(218, 495, 100, 40);
+        b1.setBounds(165, 495, 210, 40);
         b1.setFont(new Font("Bahnschrift SemiCondensed", Font.BOLD, 20));
         b1.setForeground(Color.BLACK);
         b1.setBackground(new Color(242,205,123)); p.add(b1);
@@ -105,7 +105,7 @@ public class Forgot extends JFrame {
                 try {
                     String login = tf1.getText();
         
-                    String query = "SELECT * FROM users where Login ='" + login + "'" ;
+                    String query = "SELECT * FROM sign where Login ='" + login + "'" ;
         
                     Statement statement = connection.createStatement();
         

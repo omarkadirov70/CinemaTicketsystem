@@ -144,8 +144,8 @@ public class AdminPage extends JFrame {
         addButton=new JButton("ADD");
         addButton.setBounds(90, 400, 150, 30);
         addButton.setFont(new Font("Serif", Font.PLAIN, 20));
-        addButton.setForeground(Color.WHITE);
-        addButton.setBackground(new Color(39, 48, 57));
+        addButton.setForeground(Color.BLACK);
+        addButton.setBackground(new Color(242,205,123));
         add(addButton);
         
 
@@ -178,10 +178,10 @@ public class AdminPage extends JFrame {
         });
 
         backmenu=new JButton("Back");
-        backmenu.setBounds(90, 470, 150, 30);
+        backmenu.setBounds(90, 540, 150, 30);
         backmenu.setFont(new Font("Serif", Font.PLAIN, 20));
-        backmenu.setForeground(Color.WHITE);
-        backmenu.setBackground(new Color(39, 48, 57));
+        backmenu.setForeground(Color.BLACK);
+        backmenu.setBackground(new Color(242,205,123));
         add(backmenu);
         AdminMenu adm = new AdminMenu();
         backmenu.addActionListener(new ActionListener() { 
@@ -194,10 +194,10 @@ public class AdminPage extends JFrame {
 
     
         deleteButton=new JButton("DELETE");
-        deleteButton.setBounds(90, 540, 150, 30);
+        deleteButton.setBounds(90, 470, 150, 30);
         deleteButton.setFont(new Font("Serif", Font.PLAIN, 20));
-        deleteButton.setForeground(Color.WHITE);
-        deleteButton.setBackground(new Color(39, 48, 57));
+        deleteButton.setForeground(Color.BLACK);
+        deleteButton.setBackground(new Color(242,205,123));
         add(deleteButton);
         deleteButton.addActionListener(new ActionListener() {
             @Override

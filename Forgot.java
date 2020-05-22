@@ -125,7 +125,7 @@ public class Forgot extends JFrame {
                         JOptionPane.showMessageDialog(null, "Incorerct login");
                     }
                     String a = tf2.getText();
-                    String query2 = "SELECT * FROM users where Answer = '" + a + "'";
+                    String query2 = "SELECT * FROM sign where Answer = '" + a + "'";
 
                     preparedStatement = connection.prepareStatement(query2);
                     preparedStatement.executeQuery();

@@ -44,7 +44,7 @@ public class Forgot extends JFrame {
         JFrame f = new JFrame();
         f.setIconImage(new ImageIcon("film.png").getImage());
         f.setSize(553, 829);
-        f.setTitle("Reset Password");
+        f.setTitle("Password Recovery");
     
         f.setDefaultCloseOperation(EXIT_ON_CLOSE);
         
@@ -56,33 +56,33 @@ public class Forgot extends JFrame {
 
         tf1.setBounds(130, 270, 280, 35);
         tf1.setFont(new Font("Bahnschrift SemiCondensed", Font.BOLD, 21));
-        tf1.setForeground(Color.GRAY);
-        tf1.setBackground(new Color(39, 48, 57)); p.add(tf1);
+        tf1.setForeground(Color.BLACK);
+        tf1.setBackground(new Color(255, 101, 101)); p.add(tf1);
 
         cb.setBounds(130, 364, 280, 35);
         cb.setFont(new Font("Bahnschrift SemiCondensed", Font.BOLD, 20));
-        cb.setForeground(Color.GRAY);
-        cb.setBackground(new Color(39, 48, 57)); p.add(cb);
+        cb.setForeground(Color.BLACK);
+        cb.setBackground(new Color(255, 101, 101)); p.add(cb);
 
-        tf2.setBounds(130, 316, 280, 35);
+        tf2.setBounds(130, 412, 280, 35);
         tf2.setFont(new Font("Bahnschrift SemiCondensed", Font.BOLD, 21));
-        tf2.setForeground(Color.GRAY);
-        tf2.setBackground(new Color(39, 48, 57)); p.add(tf2);
+        tf2.setForeground(Color.BLACK);
+        tf2.setBackground(new Color(255, 101, 101)); p.add(tf2);
 
-        tf3.setBounds(130, 412, 280, 35);
+        tf3.setBounds(130, 316, 280, 35);
         tf3.setFont(new Font("Bahnschrift SemiCondensed", Font.BOLD, 20));
-        tf3.setForeground(Color.GRAY);
-        tf3.setBackground(new Color(39, 48, 57)); p.add(tf3);
+        tf3.setForeground(Color.BLACK);
+        tf3.setBackground(new Color(255, 101, 101)); p.add(tf3);
 
         b1.setBounds(218, 495, 100, 40);
         b1.setFont(new Font("Bahnschrift SemiCondensed", Font.BOLD, 20));
-        b1.setForeground(Color.WHITE);
-        b1.setBackground(new Color(39, 48, 57)); p.add(b1);
+        b1.setForeground(Color.BLACK);
+        b1.setBackground(new Color(242,205,123)); p.add(b1);
 
         b2.setBounds(218, 545, 100, 40);
         b2.setFont(new Font("Bahnschrift SemiCondensed", Font.BOLD, 20));
-        b2.setForeground(Color.WHITE);
-        b2.setBackground(new Color(39, 48, 57)); p.add(b2);
+        b2.setForeground(Color.BLACK);
+        b2.setBackground(new Color(242,205,123)); p.add(b2);
         
         l0.setBounds(-6, 0, 550, 826);
         ImageIcon image = new ImageIcon("c2.jpg");

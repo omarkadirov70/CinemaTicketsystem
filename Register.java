@@ -47,7 +47,7 @@ public class Register extends JFrame {
         
         p.setLayout(null);
 
-        l.setBounds(175, 140, 300, 30);
+        l.setBounds(175, 140, 300, 40);
         l.setFont(new Font("Bahnschrift SemiCondensed", Font.BOLD, 30));
         l.setForeground(new Color(255, 255, 255)); p.add(l);
 

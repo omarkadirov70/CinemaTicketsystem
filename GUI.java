@@ -70,36 +70,36 @@ public class GUI extends JFrame {
         text1 = new JTextField(" Username");
         text1.setBounds(130, 270, 280, 35);
         text1.setFont(new Font("Serif", Font.PLAIN, 25));
-        text1.setForeground(Color.GRAY);
-        text1.setBackground(new Color(39, 48, 57));
+        text1.setForeground(Color.BLACK);
+        text1.setBackground(new Color(255, 101, 101));
         p.add(text1);
 
         b1 = new JButton("Log In");
         b1.setBounds(220, 400, 90, 50);
-        b1.setFont(new Font("Serif", Font.PLAIN, 20));
-        b1.setForeground(Color.WHITE);
-        b1.setBackground(new Color(39, 48, 57));
+        b1.setFont(new Font("Serif", Font.PLAIN, 21));
+        b1.setForeground(Color.BLACK);
+        b1.setBackground(new Color(242,205,123));
         p.add(b1);
 
         fb = new JButton("Restore");
         fb.setBounds(324, 555, 100, 30);
-        fb.setFont(new Font("Serif", Font.PLAIN, 17));
-        fb.setForeground(Color.WHITE);
-        fb.setBackground(new Color(39, 48, 57));
+        fb.setFont(new Font("Serif", Font.PLAIN, 18));
+        fb.setForeground(Color.BLACK);
+        fb.setBackground(new Color(242,205,123));
         p.add(fb);
 
         signupb = new JButton("Sign Up");
         signupb.setBounds(335, 600, 100, 30);
-        signupb.setFont(new Font("Serif", Font.PLAIN, 17));
-        signupb.setForeground(Color.WHITE);
-        signupb.setBackground(new Color(39, 48, 57));
+        signupb.setFont(new Font("Serif", Font.PLAIN, 18));
+        signupb.setForeground(Color.BLACK);
+        signupb.setBackground(new Color(242,205,123));
         p.add(signupb);
 
         textResult = new JTextField(" Password");
         textResult.setBounds(130, 330, 280, 35);
         textResult.setFont(new Font("Serif", Font.PLAIN, 25));
-        textResult.setForeground(Color.GRAY);
-        textResult.setBackground(new Color(39, 48, 57));
+        textResult.setForeground(Color.BLACK);
+        textResult.setBackground(new Color(242, 98, 98));
         p.add(textResult);
 
         l0.setBounds(-6, 0, 550, 826);

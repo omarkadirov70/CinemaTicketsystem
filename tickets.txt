@@ -2,35 +2,44 @@
 Ticket Details
 
 Ticket Number: 5
-Ticket Price: 10
-Ticket Type: Adult
+Ticket Price: 2
+Ticket Type: Child
 Ticket Time: 13:00
-Ticket Block: Middle Block
-____________________________________________________________________________________
+Ticket Block: Left Block
+
 
 Ticket Details
 
 Ticket Number: 6
-Ticket Price: 10
-Ticket Type: Adult
+Ticket Price: 2
+Ticket Type: Child
+Ticket Time: 13:00
+Ticket Block: Left Block
+
+
+Ticket Details
+
+Ticket Number: 1
+Ticket Price: 5
+Ticket Type: Child
 Ticket Time: 13:00
 Ticket Block: Middle Block
-____________________________________________________________________________________
+
 
 Ticket Details
 
-Ticket Number: 9
+Ticket Number: 2
 Ticket Price: 5
-Ticket Type: Adult
+Ticket Type: Child
 Ticket Time: 13:00
-Ticket Block: Left Block
-____________________________________________________________________________________
+Ticket Block: Middle Block
+
 
 Ticket Details
 
-Ticket Number: 10
+Ticket Number: 3
 Ticket Price: 5
-Ticket Type: Adult
+Ticket Type: Child
 Ticket Time: 13:00
-Ticket Block: Left Block
-____________________________________________________________________________________
+Ticket Block: Middle Block
+

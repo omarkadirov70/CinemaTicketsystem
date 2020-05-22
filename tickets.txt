@@ -2,8 +2,8 @@
 Ticket Details
 
 Ticket Number: 5
-Ticket Price: 2
-Ticket Type: Child
+Ticket Price: 3
+Ticket Type: OAP
 Ticket Time: 13:00
 Ticket Block: Left Block
 
@@ -11,8 +11,8 @@ Ticket Block: Left Block
 Ticket Details
 
 Ticket Number: 6
-Ticket Price: 2
-Ticket Type: Child
+Ticket Price: 3
+Ticket Type: OAP
 Ticket Time: 13:00
 Ticket Block: Left Block
 
@@ -20,26 +20,71 @@ Ticket Block: Left Block
 Ticket Details
 
 Ticket Number: 1
-Ticket Price: 5
-Ticket Type: Child
+Ticket Price: 3
+Ticket Type: OAP
 Ticket Time: 13:00
-Ticket Block: Middle Block
+Ticket Block: Left Block
 
 
 Ticket Details
 
 Ticket Number: 2
-Ticket Price: 5
-Ticket Type: Child
+Ticket Price: 3
+Ticket Type: OAP
+Ticket Time: 13:00
+Ticket Block: Left Block
+
+
+Ticket Details
+
+Ticket Number: 9
+Ticket Price: 3
+Ticket Type: OAP
+Ticket Time: 13:00
+Ticket Block: Right Block
+
+
+Ticket Details
+
+Ticket Number: 10
+Ticket Price: 3
+Ticket Type: OAP
+Ticket Time: 13:00
+Ticket Block: Right Block
+
+
+Ticket Details
+
+Ticket Number: 5
+Ticket Price: 3
+Ticket Type: OAP
 Ticket Time: 13:00
 Ticket Block: Middle Block
 
 
 Ticket Details
 
-Ticket Number: 3
-Ticket Price: 5
-Ticket Type: Child
+Ticket Number: 6
+Ticket Price: 3
+Ticket Type: OAP
+Ticket Time: 13:00
+Ticket Block: Middle Block
+
+
+Ticket Details
+
+Ticket Number: 9
+Ticket Price: 3
+Ticket Type: OAP
+Ticket Time: 13:00
+Ticket Block: Middle Block
+
+
+Ticket Details
+
+Ticket Number: 10
+Ticket Price: 3
+Ticket Type: OAP
 Ticket Time: 13:00
 Ticket Block: Middle Block
 

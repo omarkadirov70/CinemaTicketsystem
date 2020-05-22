@@ -17,7 +17,7 @@ public class booking extends JFrame implements ActionListener
 
 	Seat leftside1[][] = new Seat [4] [4];
 	Seat midside1[][] = new Seat [4] [4];
-	Seat rightside1[][] = new Seat [4] [4]; // Each one of these creates an array for each block
+	Seat rightside1[][] = new Seat [4] [4]; // Каждый из них создает массив для каждого блока
 
 	Seat leftside3[][] = new Seat [4] [4];
 	Seat midside3[][] = new Seat [4] [4];
@@ -35,7 +35,7 @@ public class booking extends JFrame implements ActionListener
 	Seat midside9[][] = new Seat [4] [4];
 	Seat rightside9[][] = new Seat [4] [4];
 
-	Ticket tickets[] = new Ticket[30]; //Array for storing the tickets booked
+	Ticket tickets[] = new Ticket[30]; //Массив для хранения забронированных билетов
 
 	public booking()
 	{
@@ -113,52 +113,52 @@ public class booking extends JFrame implements ActionListener
 
 
 		xleft = 50;
-		yleft = 310; //Initial positions
-		int totalleftside1 = 0; //'Total' is the total and is used to label the seats
+		yleft = 310; //Начальные позиции
+		int totalleftside1 = 0; //«Итого» - это сумма, которая используется для обозначения мест
 
 		for (int i = 0; i < leftside1.length; i++)
 		{
 			for (int j = 0; j < 4; j++)
 			{
 				leftside1[i][j]=new Seat(totalleftside1, 0, xleft, yleft);
-				xleft += 50; //Moving the next seat along the x position by 50
-				totalleftside1 ++; //Adding one to the total for the next seat
+				xleft += 50; //Перемещение следующего сиденья вдоль позиции х на 50
+				totalleftside1 ++; //Добавление одного к общему количеству для следующего места
 			}
 			xleft = 50; //Moving back to the left for the next row
 			yleft += 30; //Moving down for the next row
 		}
 
 		xmid = 300;
-		ymid = 310; //Initial positions
-		int totalmidside1 = 0; //'Total' is the total and is used to label the seats
+		ymid = 310; //Начальные позиции
+		int totalmidside1 = 0; 
 		for (int i = 0; i < midside1.length; i++)
 		{
 			for (int j = 0; j < 4; j++)
 			{
 				midside1[i][j]=new Seat(totalmidside1, 0, xmid, ymid);
-				xmid += 50; //Moving the next seat along the x position by 50
-				totalmidside1 ++; //Adding one to the total for the next seat
+				xmid += 50; //Перемещение следующего сиденья вдоль позиции х на 50
+				totalmidside1 ++; //Добавление одного к общему количеству для следующего места
 			}
-			xmid = 300; //Moving back to the left for the next row
-			ymid += 30;  //Moving down for the next row
+			xmid = 300; //
+			ymid += 30;  //
 		}
 
 		xright = 550;
-		yright = 310; //Initial positions
-		int totalrightside1 = 0; //'Total' is the total and is used to label the seats
+		yright = 310; //
+		int totalrightside1 = 0; //
 		for (int i = 0; i < rightside1.length; i++)
 		{
 			for (int j = 0; j < 4; j++)
 			{
 				rightside1[i][j]=new Seat(totalrightside1, 0, xright, yright);
-				xright += 50; //Moving the next seat along the x position by 50
-				totalrightside1 ++; //Adding one to the total for the next seat
+				xright += 50; //
+				totalrightside1 ++; //
 			}
-			xright = 550; //Moving back to the left for the next row
-			yright += 30; //Moving down for the next row
+			xright = 550; //
+			yright += 30; //
 		}
 
-		/* The next lines of code perform the same processes as the ones before such as positions for each block */
+		/* Следующие строки кода выполняют те же процессы, что и предыдущие, например, позиции для каждого блока */
 
 		xleft = 50;
 		yleft = 310;
@@ -345,7 +345,7 @@ public class booking extends JFrame implements ActionListener
 			xright = 550;
 			yright += 30;
 		}
-		/* Adding the labels and text boxes to the screen */
+		/* Добавление меток и текстовых полей на экран */
 
 		setLocationRelativeTo(null);
         setResizable(false);
@@ -375,7 +375,7 @@ public class booking extends JFrame implements ActionListener
 		getContentPane().setBackground(mycolor);
 
 		submitbut.addActionListener(this);
-		showbut.addActionListener(this); //Action listener for each individual button
+		showbut.addActionListener(this); // действиz для каждой отдельной кнопки
 		paybut.addActionListener(this);
 	}
 	public void paint(Graphics graf)
@@ -385,69 +385,68 @@ public class booking extends JFrame implements ActionListener
 		switch(timechoice)
 		{
 			case 1:
-				for (int i = 0; i < leftside1.length; i++) //Looping throw the leftside at 1 block - gives initial size
+				for (int i = 0; i < leftside1.length; i++) //Цикл по левой стороне на 1 блок - дает начальный размер
 				{
-					for (int j = 0; j < 4; j++) //Looping through each row fully
+					for (int j = 0; j < 4; j++) //Цикл по каждому ряду полностью
 					{
-						leftside1[i][j].display(graf); //Displaying the left side @ 1
-						midside1[i][j].display(graf); //Displaying the mid side @ 1
-						rightside1[i][j].display(graf); //Displaying the right side @ 1
+						leftside1[i][j].display(graf); //Отображение левой стороны @ 1
+						midside1[i][j].display(graf); //Отображение центральной стороны @ 1
+						rightside1[i][j].display(graf); //Отображение правой стороны @ 1
 					}
 				}
 				break;
 			case 3:
-				for (int i = 0; i < leftside3.length; i++) //Looping through the leftside at 3 block - gives initial size
+				for (int i = 0; i < leftside3.length; i++) //Цикл по левой стороне на 3 блок - дает начальный размер
 				{
-					for (int j = 0; j < 4; j++) //Looping through each row fully
+					for (int j = 0; j < 4; j++) //Цикл по каждому ряду полностью
 					{
-						leftside3[i][j].display(graf); //Displaying the left side @ 3
-						midside3[i][j].display(graf); //Displaying the mid side @ 3
-						rightside3[i][j].display(graf); //Displaying the right side @ 3
+						leftside3[i][j].display(graf); //Отображение левой стороны @ 3
+						midside3[i][j].display(graf); //Отображение центральной стороны @ 3
+						rightside3[i][j].display(graf); //Отображение правой стороны @ 3
 					}
 				}
 				break;
 			case 5:
-				for (int i = 0; i < leftside5.length; i++) //Looping through the leftside at 5 block - gives initial size
+				for (int i = 0; i < leftside5.length; i++) //Цикл по левой стороне на 5 блок - дает начальный размер
 				{
-					for (int j = 0; j < 4; j++) //Looping through each row fully
+					for (int j = 0; j < 4; j++) //
 					{
-						leftside5[i][j].display(graf); //Displaying the left side @ 5
-						midside5[i][j].display(graf); //Displaying the mid side @ 5
-						rightside5[i][j].display(graf); //Displaying the right side @ 5
+						leftside5[i][j].display(graf); //Отображение левой стороны @ 5
+						midside5[i][j].display(graf); //Отображение центральной стороны @ 5
+						rightside5[i][j].display(graf); //Отображение правой стороны @ 5
 					}
 				}
 				break;
 			case 7:
-				for (int i = 0; i < leftside7.length; i++) //Looping through the leftside at 7 block - gives initial size
+				for (int i = 0; i < leftside7.length; i++) //Цикл по левой стороне на 7 блок - дает начальный размер
 				{
 					for (int j = 0; j < 4; j++) //Looping through each row fully
 					{
-						leftside7[i][j].display(graf); //Displaying the left side @ 7
-						midside7[i][j].display(graf); //Displaying the mid side @ 7
-						rightside7[i][j].display(graf); //Displaying the right side @ 7
+						leftside7[i][j].display(graf); //Отображение левой стороны @ 7
+						midside7[i][j].display(graf); //Отображение центральной стороны @ 7
+						rightside7[i][j].display(graf); //Отображение правой стороны @ 7
 					}
 				}
 				break;
 			case 9:
-				for (int i = 0; i < leftside9.length; i++) //Looping through the leftside at 7 block - gives initial size
+				for (int i = 0; i < leftside9.length; i++) //Цикл по левой стороне на 9 блок - дает начальный размер
 				{
 					for (int j = 0; j < 4; j++) //Looping through each row fully
 					{
-						leftside9[i][j].display(graf); //Displaying the left side @ 7
-						midside9[i][j].display(graf); //Displaying the mid side @ 7
-						rightside9[i][j].display(graf); //Displaying the right side @ 7
-					}
-				}
+						leftside9[i][j].display(graf); //Отображение левой стороны @ 9
+						midside9[i][j].display(graf); //Отображение центральной стороны @ 9
+						rightside9[i][j].display(graf); //Отображение правой стороны @ 9
+				}}
 				break;
 			default:
-			/* Used as what appears when the program starts */
-				for (int i = 0; i < leftside1.length; i++) //Looping through the leftside at 1 block - gives initial size
+			/* Используется как то, что появляется при запуске программы */
+				for (int i = 0; i < leftside1.length; i++) 
 				{
-					for (int j = 0; j < 4; j++) //Looping through each row fully
+					for (int j = 0; j < 4; j++) 
 					{
-						leftside1[i][j].display(graf); //Displaying the left side @ 1
-						midside1[i][j].display(graf); //Displaying the mid side @ 1
-						rightside1[i][j].display(graf); //Displaying the right side @ 1
+						leftside1[i][j].display(graf); 
+						midside1[i][j].display(graf); 
+						rightside1[i][j].display(graf); 
 					}
 				}
 				break;
@@ -455,17 +454,17 @@ public class booking extends JFrame implements ActionListener
 	}
 	public void actionPerformed(ActionEvent ev)
 	{
-		selectedblock = block.getSelectedItem(); //The values neeeded to book seats and check for availability taken from text boxes
+		selectedblock = block.getSelectedItem(); //Значения, необходимые для бронирования мест и проверки доступности, взяты из текстовых полей
 		selectedtime = time.getSelectedItem();
 		tickettype = type.getSelectedItem();
 
 		if (ev.getSource() == submitbut)
 		{
 			selectedseat = seat.getText();
-			int selectseat = Integer.parseInt(selectedseat); //Getting the seat number and converting it to an integer
+			int selectseat = Integer.parseInt(selectedseat); //Получение номера места и преобразование его в целое число
 
-			/* The following set of if statements checks for seat number and converts it
-			to an X, Y position which can be used for booking */
+			/* Следующий набор операторов if проверяет номер места и преобразует его
+в положение X, Y, которое можно использовать для бронирования */
 
 			if (selectseat == 0)
 				{convertedseat1 = 0;
@@ -517,70 +516,70 @@ public class booking extends JFrame implements ActionListener
 				convertedseat2 = 3;}
 
 
-				if (selectedtime == "13:00") //If they are trying to book a ticket a 1 o'clock
+				if (selectedtime == "13:00") //Если они пытаются забронировать билет на 1 час
 				{
 				timechoice = 1;
 				repaint();
-				if (selectedblock == "Left Block") // If they are trying to book a seat in the left block
+				if (selectedblock == "Left Block") // Если они пытаются забронировать место в левом блоке
 				{
-					int iftaken = leftside1[convertedseat1][convertedseat2].isTaken(); //Uses the istaken() method to see if it is taken
+					int iftaken = leftside1[convertedseat1][convertedseat2].isTaken(); //Использует метод istaken (), чтобы увидеть, принят ли он
 					if (iftaken == 1)
 					{
-						JOptionPane.showMessageDialog(null, "This seat is taken and cannot be booked"); //Seat is taken and outputs an error message
+						JOptionPane.showMessageDialog(null, "This seat is taken and cannot be booked"); //Место занято и выводит сообщение об ошибке
 					}
 					else if (iftaken == 0)
 					{
-						leftside1[convertedseat1][convertedseat2].setSeat(); //Sets the seat to booked
+						leftside1[convertedseat1][convertedseat2].setSeat(); //Устанавливает место для забронированных
 						repaint(); //Re-displays it
-						tickets[totaltickets] = new Ticket(tickettype, selectseat, selectedblock, selectedtime); //Creates a new ticket objects in the tickets array
-						int tempprice = tickets[totaltickets].getSeatPrice(); //Gets the seat price using the getSeatPrice() method
+						tickets[totaltickets] = new Ticket(tickettype, selectseat, selectedblock, selectedtime); //Создает новые объекты заявок в массиве заявок
+						int tempprice = tickets[totaltickets].getSeatPrice(); //Получает цену места, используя метод getSeatPrice ()
 						totalprice = totalprice + tempprice;
-						totalcost.setText("£"+ Integer.toString(totalprice)); //Updates and adds to the text box
-						totaltickets += 1; //Updates the total amount of tickets booked
+						totalcost.setText("£"+ Integer.toString(totalprice)); //Обновляет и добавляет в текстовое поле
+						totaltickets += 1; //Обновляет общее количество забронированных билетов
 						seat.setText("");
 					}
 				}
-				if (selectedblock == "Middle Block")  // If they are trying to book a seat in the middle block
+				if (selectedblock == "Middle Block")  // Если они пытаются забронировать место в центральном блоке
 				{
-					int iftaken = midside1[convertedseat1][convertedseat2].isTaken(); //Uses the istaken() method to see if it is taken
+					int iftaken = midside1[convertedseat1][convertedseat2].isTaken(); 
 					if (iftaken == 1)
 					{
-						JOptionPane.showMessageDialog(null, "This seat is taken and cannot be booked"); //Seat is taken and outputs an error message
+						JOptionPane.showMessageDialog(null, "This seat is taken and cannot be booked"); 
 					}
 					else if (iftaken == 0)
 					{
-						midside1[convertedseat1][convertedseat2].setSeat(); //Sets the seat to booked
+						midside1[convertedseat1][convertedseat2].setSeat(); 
 						repaint();
-						tickets[totaltickets] = new Ticket(tickettype, selectseat, selectedblock, selectedtime); //Creates a new ticket objects in the tickets array
-						int tempprice = tickets[totaltickets].getSeatPrice();  //Gets the seat price using the getSeatPrice() method
+						tickets[totaltickets] = new Ticket(tickettype, selectseat, selectedblock, selectedtime); 
+						int tempprice = tickets[totaltickets].getSeatPrice();  
 						totalprice = totalprice + tempprice;
-						totalcost.setText("£"+ Integer.toString(totalprice)); //Updates and adds to the text box
-						totaltickets += 1; //Updates the total amount of tickets booked
+						totalcost.setText("£"+ Integer.toString(totalprice)); 
+						totaltickets += 1; 
 						seat.setText("");
 					}
 				}
-				if (selectedblock == "Right Block")  // If they are trying to book a seat in the right block
+				if (selectedblock == "Right Block") 
 				{
-					int iftaken = rightside1[convertedseat1][convertedseat2].isTaken(); //Uses the istaken() method to see if it is taken
+					int iftaken = rightside1[convertedseat1][convertedseat2].isTaken(); 
 					if (iftaken == 1)
 					{
-						JOptionPane.showMessageDialog(null, "This seat is taken and cannot be booked");  //Seat is taken and outputs an error message
+						JOptionPane.showMessageDialog(null, "This seat is taken and cannot be booked");  
 					}
 					else if (iftaken == 0)
 					{
-						rightside1[convertedseat1][convertedseat2].setSeat(); //Sets the seat to booked
+						rightside1[convertedseat1][convertedseat2].setSeat(); 
 						repaint();
-						tickets[totaltickets] = new Ticket(tickettype, selectseat, selectedblock, selectedtime);  //Creates a new ticket objects in the tickets array
-						int tempprice = tickets[totaltickets].getSeatPrice(); //Gets the seat price using the getSeatPrice() method
+						tickets[totaltickets] = new Ticket(tickettype, selectseat, selectedblock, selectedtime);  
+						int tempprice = tickets[totaltickets].getSeatPrice(); 
 						totalprice = totalprice + tempprice;
-						totalcost.setText("£"+ Integer.toString(totalprice)); //Updates and adds to the text box
-						totaltickets += 1; //Updates the total amount of tickets booked
+						totalcost.setText("£"+ Integer.toString(totalprice)); 
+						totaltickets += 1;
 						seat.setText("");
 					}
 				}
 			}
 
-			/* Code is replicated for each of the times the user wants to book*/
+			/*  Код копируется для каждого раза, когда пользователь хочет забронировать*/
 
 			if (selectedtime == "15:00")
 			{
@@ -838,7 +837,7 @@ public class booking extends JFrame implements ActionListener
 		}
 		if (ev.getSource() == showbut)
 		{
-			/* If the user has clicked the show button it sets a variable and then repaints the desired time */
+			/* Если пользователь нажал кнопку показа, он устанавливает переменную, а затем перерисовывает желаемое время */
 
 			if (selectedtime == "13:00")
 			{
@@ -867,16 +866,16 @@ public class booking extends JFrame implements ActionListener
 			}
 
 		}
-		if (ev.getSource() == paybut) //Pay button to generate tickets
+		if (ev.getSource() == paybut) //Кнопка оплаты для генерации билетов
 		{
 
   				try{
-  					FileWriter stream= new FileWriter("tickets.txt"); //Opening the tickets.txt file
+  					FileWriter stream= new FileWriter("tickets.txt"); //Открытие файла tickets.txt
   					BufferedWriter output = new BufferedWriter(stream);
 
-					for (int i = 0; i < totaltickets; i++) //Looping through the number of tickets booked
+					for (int i = 0; i < totaltickets; i++) //Перебирая количество забронированных билетов
 					{
-  						/* Getting the variables needed from methods related to the object */
+  						/* Получение необходимых переменных из методов, связанных с объектом */
 
   						int ticketnum = tickets[i].getSeatNum();
 						int ticketprice = tickets[i].getSeatPrice();
@@ -889,7 +888,7 @@ public class booking extends JFrame implements ActionListener
 						output.write("Ticket Details");
 						output.write(newline);
 						output.write(newline);
-						output.write("Ticket Number: " + ticketnum); //Writing ticketnum
+						output.write("Ticket Number: " + ticketnum); //Написание ticketnum
 						output.write(newline);
 						output.write("Ticket Price: " + ticketprice);
 						output.write(newline);
@@ -902,19 +901,19 @@ public class booking extends JFrame implements ActionListener
 						output.write(newline);
 					}
 					output.close();
-  					}catch (Exception e){//Catch exception if any
+  					}catch (Exception e){//Catch исключение, если есть
   					System.err.println("Error: " + e.getMessage());}
 
-  				JOptionPane.showMessageDialog(null, "These tickets have been printed out to the file 'tickets.txt'"); //Success message
+  				JOptionPane.showMessageDialog(null, "These tickets have been printed out to the file 'tickets.txt'"); //Сообщение об успехе
 
   				for(int i=0; i < tickets.length; i++)
   				{
-					tickets[i] = null; //Setting the tickets array values to null so new tickets can be booked
+					tickets[i] = null; //Установка значений массива заявок на null, чтобы можно было бронировать новые билеты
 				}
-				totaltickets = 0; //Resets totaltickets to 0
-				totalprice = 0; //Resets totalprice to 0
-				totalcost.setText(""); //Sets totalcost to an empty text field
-				seat.setText(""); //Wipes seat number text field
+				totaltickets = 0; //Сбрасывает сумму билетов на 0
+				totalprice = 0; //сбрасывает сумму стоймости на 0
+				totalcost.setText(""); //Устанавливает общую стоимость пустого текстового поля
+				seat.setText(""); //Стирает текстовое поле номера места
 		}
 	}
 	public static void main(String args[])
@@ -925,8 +924,8 @@ public class booking extends JFrame implements ActionListener
 }
 class Seat
 {
-	private final int boxheight = 30; //Height of the drawn text box
-	private final int boxwidth = 50; //Width of the drawn text box
+	private final int boxheight = 30; //Высота нарисованного ряда сидушек
+	private final int boxwidth = 50; //ширина нарисованного ряда сидушек
 	private int seatnumber;
 	private int seattaken;
 	private int x;
@@ -934,9 +933,9 @@ class Seat
 
 	public Seat(int number, int taken, int xstart, int ystart)
 	{
-		seatnumber = number; //Setting the seatnumber
-		seattaken = taken; //Setting whether it is taken
-		x = xstart; //Display position
+		seatnumber = number; //Установить номера места
+		seattaken = taken; //Установка, если это принято
+		x = xstart; //Положение 
 		y = ystart;
 	}
 	public void display(Graphics graf)
@@ -948,14 +947,14 @@ class Seat
 			xdraw = x +  boxwidth;
 			ydraw = y +  boxheight;
 			graf.drawRect(x,y,boxwidth,boxheight);
-			graf.drawString(Integer.toString(seatnumber),x+20,y+boxheight*3/4); //Painting the seat with the seat number printed inside
+			graf.drawString(Integer.toString(seatnumber),x+20,y+boxheight*3/4); //Покраска сиденья с номером сиденья, напечатанным внутри
 			break;
 		case 1:
 			xdraw = x +  boxwidth;
 			ydraw = y +  boxheight;
 			graf.drawRect(x,y,boxwidth,boxheight);
 			String msg = "N/A";
-			graf.drawString(msg,x+20,y+boxheight*3/4); //Painting the seat with N/A printed inside
+			graf.drawString(msg,x+20,y+boxheight*3/4); //Покраска сиденья с надписью N / A внутри
 			break;
 		default:
 			break;
@@ -982,25 +981,25 @@ class Ticket
 
 	public Ticket (String type, int seatnumber, String block, String time)
 	{
-		seatnum = seatnumber; //Setting tickets seat number
-		tickettype = type; //Setting ticket type
-		blockticket = block; //Setting block
-		timeticket = time; //Setting time
+		seatnum = seatnumber; //Установка билетов места
+		tickettype = type; //Установка типа билета
+		blockticket = block; //Установка блока
+		timeticket = time; //Назначить время
 
 		if (blockticket == "Left Block")
 		{
 
 			if (type == "Adult")
 			{
-				price = 5; //Setting adult price
+				price = 5; //Установка цены для взрослых
 			}
 			if (type == "OAP")
 			{
-				price = 3; //Setting OAP price
+				price = 3; //Установка цены для студентов анау мынау
 			}
 			if (type == "Child")
 			{
-				price = 2;  //Setting child price
+				price = 2;  //Установка цены для детей
 			}
 		}
 
@@ -1009,15 +1008,15 @@ class Ticket
 
 			if (type == "Adult")
 			{
-				price = 10; //Setting adult price
+				price = 10; 
 			}
 			if (type == "OAP")
 			{
-				price = 3; //Setting OAP price
+				price = 3; 
 			}
 			if (type == "Child")
 			{
-				price = 5;  //Setting child price
+				price = 5;  
 			}
 		}
 
@@ -1026,19 +1025,19 @@ class Ticket
 
 			if (type == "Adult")
 			{
-				price = 5; //Setting adult price
+				price = 5; 
 			}
 			if (type == "OAP")
 			{
-				price = 3; //Setting OAP price
+				price = 3; 
 			}
 			if (type == "Child")
 			{
-				price = 2;  //Setting child price
+				price = 2;  
 			}
 		}
 	}
-	/* The following get methods are used to print tickets */
+	/* Следующие методы get используются для печати билетов */
 	public int getSeatPrice()
 	{
 		return price;
